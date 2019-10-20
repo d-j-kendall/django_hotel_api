@@ -12,12 +12,16 @@ import time
 import traceback
 import signal
 import sys
-from django.core.wsgi import get_wsgi_application
 
 sys.path.append('/var/www/django_hotel_api')
-sys.path.append('/home/backend/miniconda3/envs/ece354/lib/python3.7')
-
+sys.path.append('/usr/local/miniconda3/envs/ece354/lib/python3.7/site-packages')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dm_hotel.settings')
+
+
+from django.core.wsgi import get_wsgi_application
+
+
+
 try:
     application = get_wsgi_application()
 except Exception:
