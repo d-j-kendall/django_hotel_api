@@ -29,7 +29,7 @@ with open(os.path.join(BASE_DIR,'secret.txt'), 'r') as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['hotel.dustinkendall.com']
 
 
 # Application definition
