@@ -14,7 +14,7 @@ import signal
 import sys
 
 sys.path.append('/var/www/django_hotel_api')
-sys.path.append('/usr/local/miniconda3/envs/ece354/lib/python3.7/site-packages')
+sys.path.append('/usr/local/ece354/lib/python3.5/site-packages')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'dm_hotel.settings')
 
 
