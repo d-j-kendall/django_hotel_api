@@ -14,7 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include, re_path
+from django.urls import path
+from django.conf.urls import include, url
 import api.resources as apres
 
 customer_resource = apres.CustomerResource()
@@ -22,5 +23,7 @@ reservation_resource = apres.ReservationResource()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'^api/', include(customer_resource), include(reservation_resource))
+    url(r'^api/', include(customer_resource.urls)),
+    url(r'^api/', include(reservation_resource.urls)),
+
 ]

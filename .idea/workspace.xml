@@ -4,6 +4,7 @@
     <list default="true" id="00e03744-4b5b-4ee4-b35c-8e97e691a21e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dm_hotel/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm_hotel/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dm_hotel/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dm_hotel/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +40,7 @@
   <component name="PropertiesComponent">
     <property name="DBE.Init.BalloonShown" value="true" />
     <property name="DatabaseDriversLRU" value="sqlite" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/db.sqlite3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -82,7 +83,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
