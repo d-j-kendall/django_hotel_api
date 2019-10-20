@@ -8,9 +8,12 @@ https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
 """
 
 import os
-import time,traceback,signal,sys
-
+import time
+import traceback
+import signal
+import sys
 from django.core.wsgi import get_wsgi_application
+
 sys.path.append('/var/www/django_hotel_api')
 sys.path.append('/home/backend/miniconda3/envs/ece354/lib/python3.7')
 
