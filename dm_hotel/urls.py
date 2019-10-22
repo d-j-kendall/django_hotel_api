@@ -14,16 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from django.conf.urls import include, url
+from django.urls import path, include
+import django.conf.urls as conf_urls
+import django
 import api.resources as apres
-
+import home.views
 customer_resource = apres.CustomerResource()
 reservation_resource = apres.ReservationResource()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^api/', include(customer_resource.urls)),
-    url(r'^api/', include(reservation_resource.urls)),
+    path('api/', include(customer_resource.urls)),
+    path('api/', include(reservation_resource.urls)),
+    path('account/', include('django.contrib.auth.urls')),
+    path('', home.views.index, name='index')
 
 ]
