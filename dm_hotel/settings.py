@@ -62,7 +62,11 @@ ROOT_URLCONF = 'dm_hotel.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [BASE_DIR,
+=======
+        'DIRS': [f"{BASE_DIR}",
+>>>>>>> user-account-creation
                  BASE_DIR+'/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
