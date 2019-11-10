@@ -29,6 +29,7 @@ urlpatterns = [
     path('api/', include(reservation_resource.urls)),
     path('account/', include('django.contrib.auth.urls')),
     path('', home.views.index, name='index'),
+    path('make_cust',home.views.create_cust, name='make_cust'),
     path('new_customer/', views.create_user)
 
 ]
