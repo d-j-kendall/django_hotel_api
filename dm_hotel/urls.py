@@ -18,6 +18,7 @@ from django.urls import path, include
 import django.conf.urls as conf_urls
 import django
 import api.resources as apres
+from api import views
 import home.views
 customer_resource = apres.CustomerResource()
 reservation_resource = apres.ReservationResource()
@@ -27,6 +28,7 @@ urlpatterns = [
     path('api/', include(customer_resource.urls)),
     path('api/', include(reservation_resource.urls)),
     path('account/', include('django.contrib.auth.urls')),
-    path('', home.views.index, name='index')
+    path('', home.views.index, name='index'),
+    path('new_customer/', views.create_user)
 
 ]
