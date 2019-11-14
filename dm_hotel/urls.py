@@ -23,6 +23,7 @@ import home.views
 customer_resource = apres.CustomerResource()
 reservation_resource = apres.ReservationResource()
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(customer_resource.urls)),
@@ -30,6 +31,7 @@ urlpatterns = [
     path('account/', include('django.contrib.auth.urls')),
     path('', home.views.index, name='index'),
     path('make_cust',home.views.create_cust, name='make_cust'),
-    path('new_customer/', views.create_user)
-
-]
+    path('new_customer/', views.create_user),
+    path('make_reservation/', home.views.make_reservation),
+    path('check_reservation/', home.views.check_reservation)
+    ]

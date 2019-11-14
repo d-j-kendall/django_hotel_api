@@ -16,5 +16,6 @@ class CustomerResource(ModelResource):
     class Meta:
         serializer_class = api.serializers.CustomerSerializers
         queryset = Customer.objects.all()
+        filtering = {'id': ['exact', 'in']}
         resource_name = 'customer'
         list_allowed_methods = ['get','post','put','delete']

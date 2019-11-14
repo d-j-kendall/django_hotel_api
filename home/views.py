@@ -8,4 +8,12 @@ def index(request):
 
 
 def create_cust(request):
-    return render_to_response('home/create_reservation.html')
+    return render_to_response('home/create_customer.html')
+
+
+def make_reservation(request):
+    return render_to_response('home/make_reservation.html')
+
+def check_reservation(request):
+    return render_to_response('templates/check_reservation.html')
+

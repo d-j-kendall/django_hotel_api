@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from api.models import Customer
+from rest_framework.serializers import ModelSerializer
+from api.models import Customer, Reservation, Transaction, RoomType
 
 
 class CustomerSerializers(serializers.Serializer):
@@ -29,3 +30,21 @@ class CustomerSerializers(serializers.Serializer):
         )
         user.save()
         return user
+
+class ReservationSerializer(ModelSerializer):
+
+    class Meta:
+        model = Reservation
+        fields = (
+            'confirmation_number',
+            'customer_id',
+            'check_in',
+            'check_out',
+            'checked_in',
+            'checked_out',
+            'room_number',
+            'room_type_id',
+            'no_occupants',
+            'guaranteed',
+            )
+        
