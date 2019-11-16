@@ -6,7 +6,14 @@
 </head>
 <body>
 <h1 style="text-align:center">Welcome to Hotel California</h1>
+
 <button onclick="window.location.href = '/make_cust';" style="display:flex;justify-content:center">New Customers</button>
-<button style="display:flex;justify-content:center">Create a Reservation</button>
+<br>
+<br>
+
+<form method="get" action="/check_reservation/">
+    <input type="number" name="id" value=""><br>
+    <button style="display:flex;justify-content:center" type="submit" value="submit">Check Reservation</button>
+</form>
 </body>
 </html>
