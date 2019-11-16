@@ -11,30 +11,36 @@
         <button type="submit" value="Submit"></button>
     </form>
 
+    <table style="width:50%;align:center">
     <tr>
         <th>Field</th>
         <th>Value</th>
     </tr>
     <tr>
         <td>First Name</td>
-        <td>{{first_name}}</td>
+        <td>{{customer.first_name}}</td>
     </tr>
     <tr>
         <td>Last Name</td>
-        <td>{{last_name}}</td>
+        <td>{{customer.last_name}}</td>
     </tr>
     <tr>
         <td>Check In Date</td>
-        <td>{{check_in}}</td>
+        <td>{{reservation.check_in}}</td>
     </tr>
     <tr>
-        <td>Last Name</td>
-        <td>{{last_name}}</td>
+        <td>Check Out Date</td>
+        <td>{{reservation.check_out}}</td>
     </tr>
     <tr>
-        <td>Last Name</td>
-        <td>{{last_name}}</td>
+        <td>Room Type</td>
+        <td>{{room_type}}</td>
     </tr>
+    <tr>
+        <td>No Occupants</td>
+        <td>{{reservation.no_occupants}}</td>
+    </tr>
+    </table>
 
 
 </body>

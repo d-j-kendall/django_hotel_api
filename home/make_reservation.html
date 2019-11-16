@@ -2,7 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Make Your Reservation</title>
+    <form method="post" action="/make_reservation/">
+        Customer Id:<br>
+        <input type="number"><br>
+        Check In Date:<br>
+        <input type="date"><br>
+        Check Out Date:<br>
+        <input type="date"><br>
+        Number Occupants<br>
+        <input type="number"><br>
+        <br>
+        Single:
+        <input type="checkbox" name="Single" value="1">
+        Double:
+        <input type="checkbox" name="Double" value="2">
+        <br>
+        <br>
+        Credit Card:
+        <input type="number" name="cc-number"><br>
+    </form>
 </head>
 <body>
 

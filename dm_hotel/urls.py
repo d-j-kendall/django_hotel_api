@@ -32,6 +32,6 @@ urlpatterns = [
     path('', home.views.index, name='index'),
     path('make_cust',home.views.create_cust, name='make_cust'),
     path('new_customer/', views.create_user),
-    path('make_reservation/', home.views.make_reservation),
+    path('make_res/', home.views.make_reservation),
     path('check_reservation/', home.views.check_reservation)
     ]

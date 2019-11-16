@@ -14,11 +14,14 @@ def create_cust(request):
     return render_to_response('home/create_customer.html')
 
 
+@api_view(['GET', 'POST'])
 def make_reservation(request):
-    return render_to_response('home/make_reservation.html')
+    if len(request.POST) == 0:
+        return render_to_response('home/make_reservation.html')
+    else:
 
 
-@api_view(['GET','POST'])
+@api_view(['GET', 'POST'])
 def check_reservation(request):
     reservation = Reservation.objects.get(confirmation_number=request.GET['id'])
     print(reservation.customer_id)
