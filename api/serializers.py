@@ -33,18 +33,24 @@ class CustomerSerializers(serializers.Serializer):
 
 class ReservationSerializer(ModelSerializer):
 
+    customer_id = serializers.IntegerField(required=True)
+    check_in = serializers.DateField(required=True)
+    check_out = serializers.DateField(required=True)
+    room_type_id = serializers.IntegerField(required=True)
+    no_occupants = serializers.IntegerField(required=True)
+
     class Meta:
         model = Reservation
-        fields = (
-            'confirmation_number',
-            'customer_id',
-            'check_in',
-            'check_out',
-            'checked_in',
-            'checked_out',
-            'room_number',
-            'room_type_id',
-            'no_occupants',
-            'guaranteed',
-            )
-        
+        fields = '__all__'
+
+    def __init__(self):
+        super(ReservationSerializer,self).__init__()
+
+    def save(self, validated_user_data):
+        res = Reservation(customer_id=Customer.objects.get(id=validated_user_data['customer_id']),
+                          check_in=validated_user_data['check_in'],
+                          check_out=validated_user_data['check_out'],
+                          room_type_id=RoomType.object.get(id=validated_user_data['room_type_id']),
+                          no_occupants=validated_user_data['no_occupants'])
+        res.save()
+        return res

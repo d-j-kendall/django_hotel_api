@@ -5,18 +5,18 @@
     <title>Make Your Reservation</title>
     <form method="post" action="/make_reservation/">
         Customer Id:<br>
-        <input type="number"><br>
+        <input type="number" name="customer_id"><br>
         Check In Date:<br>
-        <input type="date"><br>
+        <input type="date" name="check_in"><br>
         Check Out Date:<br>
-        <input type="date"><br>
+        <input type="date" name="check_out"><br>
         Number Occupants<br>
-        <input type="number"><br>
+        <input type="number" name="no_occupants"><br>
         <br>
         Single:
-        <input type="checkbox" name="Single" value="1">
+        <input type="radio" name="room_type_id" value="1">
         Double:
-        <input type="checkbox" name="Double" value="2">
+        <input type="radio" name="room_type_id" value="2">
         <br>
         <br>
         Credit Card:
