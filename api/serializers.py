@@ -43,8 +43,8 @@ class ReservationSerializer(ModelSerializer):
         model = Reservation
         fields = '__all__'
 
-    def __init__(self):
-        super(ReservationSerializer,self).__init__()
+    def __init__(self, data):
+        super(ReservationSerializer,self).__init__(self,data=data)
 
     def save(self, validated_user_data):
         res = Reservation(customer_id=Customer.objects.get(id=validated_user_data['customer_id']),
