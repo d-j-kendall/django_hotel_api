@@ -1,3 +1,4 @@
 secret.txt
 .idea/
 venv/
+*__pycache__*
