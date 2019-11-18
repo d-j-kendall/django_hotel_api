@@ -1,10 +1,17 @@
 <!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'styles/style.css' %}">
 <html lang="en">
 <head>
+    {% block css %}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.1/css/materialize.min.css" integrity="sha256-qj3p6P1fJIV+Ndv7RW1ovZI2UhOuboj9GcODzcNFIN8=" crossorigin="anonymous" />
+    {% endblock css %}
     <meta charset="UTF-8">
     <title>Hotel California</title>
 </head>
 <body>
+<div class="parallax">
 <h1 style="text-align:center">Welcome to Hotel California</h1>
 
 <button onclick="window.location.href = '/make_cust';" style="display:flex;justify-content:center">New Customers</button>
@@ -20,5 +27,6 @@
     <input type="number" name="id" value="Confirmation Number"><br>
     <button style="display:flex;justify-content:center" type="submit" value="submit">Check Reservation</button>
 </form>
+    </div>
 </body>
 </html>

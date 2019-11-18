@@ -1,0 +1,12 @@
+.parallax {
+    background-image: url('https://pix10.agoda.net/hotelImages/294/294166/294166_15040615130026720872.jpg');
+    height: 500dp;
+
+    background-attachment:fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body {
+   background-image: url('http://cdn.cnn.com/cnnnext/dam/assets/160726132219-us-beautiful-hotels-4-four-seasons-maui1.jpg');
+}
